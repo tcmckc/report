@@ -1,0 +1,25 @@
+# Symfony cache and logs
+/var/cache/*
+/var/logs/*
+
+# Symfony environment configuration
+/.env.local.php
+/.env.local
+/.env.php
+/.env
+
+# Composer dependencies
+/vendor/
+
+# User uploads and media files
+/public/uploads/*
+/public/media/*
+
+# Build artifacts and IDE files
+/var/*.idea/
+/.phpstorm.meta.php
+/.php_cs.cache
+
+# Application specific cache and logs
+/var/app_cache/*
+/var/app_log/*

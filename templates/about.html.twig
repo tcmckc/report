@@ -1,0 +1,31 @@
+{% extends "base.html.twig" %}
+
+{% block title %}About{% endblock %}
+
+{% block main %}
+<main class="main">
+    <h1>About mvc</h1>
+    <p>The course "object-oriented web technologies"(Objektorienterade webbteknologier in Swedish), a.k.a. mvc, focuses on object-oriented programming techniques in PHP programming language.</p>
+    <p>The perpose of this course is to provide a knowledge and understanding on object-oriented programming paradigm and development of database driven web applications.</p>
+
+    <img src="img/php.jpg" width="400px" alt="me"> 
+    </p>
+    <div>
+        <a href="https://github.com/dbwebb-se/mvc">
+            <p>mvc-course GitHub</p>
+        </a>
+    </div>
+    <div>
+        <a href="https://github.com/tcmckc">
+            {# <i class="fab fa-github"></i> #}
+            <p>my GitHub</p>
+        </a>
+    </div>
+    {# <p>Go to the mvc course's <a href="
+    {# <p>Go to the mvc course's <a href="https://github.com/dbwebb-se/mvc">Git-repo</a></p>
+    <p>Go to the mvc course's <a href="https://github.com/tcmckc">Git-repo</a></p> #}
+</main>
+
+{# <a href="{{ path("about") }}">About</a> #}
+
+{% endblock %}

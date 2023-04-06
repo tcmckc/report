@@ -1,0 +1,15 @@
+{% extends "base.html.twig" %}
+
+{% block title %}Lucky{% endblock %}
+
+{% block main %}
+<main class="main">
+    <h1>Lucky</h1>
+    <p>This is the current lucky number: {{ number }}</p>
+
+    <a href="{{ asset('img/glider.svg') }}">
+        <img src="{{ asset('img/glider.svg') }}" alt="glider">
+    </a>
+</main>
+
+{% endblock %}
