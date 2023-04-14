@@ -16,12 +16,15 @@
 }
 
 html {
-    /* background-color: rgb(2, 68, 2, 0.6); */
     background-color: $background-color;
     color: white;
     font-family: 'Quicksand', sans-serif;
     line-height: 1.5;
     font-size: 1.2em;
+}
+
+main {
+    width: 100%;
 }
 
 ul {
@@ -74,7 +77,6 @@ form {
 }
 
 .main {
-    text-align: center;
     width: 100%;
 }
 
