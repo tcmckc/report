@@ -36,8 +36,23 @@
     Dessutom var kapitlet om mallar också bra för att organisera min förståelse. Genom användning av vyer i mvc kan man skriva lättläst kod begränsad till innehållsvisning.
 
     <h2 id="kmom02">Kmom02</h2>
-    <h3></h3>
+    <h3>Objektorientering</h3>
+    <p>Arv låter en klass ärva egenskaper och metoder från en annan klass. Genom att använda arv kan man undvika att duplicera kod och istället återanvända redan skriven kod. </p>
+
+    <p>Komposition är en mekanism där en klass innehåller en eller flera instanser av andra klasser istället för att ärva egenskaper och metoder från en föräldraklass. Detta gör det möjligt att bygga mer flexibla och återanvändbara objekt.</p>
+
+    <p>Interface definierar en uppsättning metoder som en klass kan implementera. Detta gör det möjligt att separera implementation från gränssnittet, vilket gör det lättare att byta ut implementationen senare. En klass implementerar ett interface genom att definiera alla metoder som finns i interfacet.</p>
+
+    <p>Trait gör det möjligt att återanvända kod mellan klasser utan att skapa en hierarki av klasser. En trait definierar en uppsättning metoder som kan användas i flera klasser. En klass kan använda flera traits och traits kan använda andra traits.</p>
     
+    <h3>Implementation av kortspelet</h3>
+    <p>Två klasser, Card och Deck, används i detta kortspelet. I Card-klassen har varje kort ett märkesattribut som representerar fyra symboler och ett numeriskt värdeattribut. Klassen Deck tillhandahåller funktioner som att skapa nya kortlekar, blanda kortlekar och dra kort från kortlekar. Dessutom skapar shuffle inte en ny kortlek, utan blandar den befintliga kortleken som sparats i sessionen.</p>
+
+    <p>Jag försökte återanvända twig-filer så mycket som möjligt och rendera Deck och Shuffle till samma fil, och Draw till samma fil oavsett om det är ett eller flera kort som dras ut.</p>
+
+    <p>När det gäller JSON API-frågan hade jag svårt att skapa en route för POST-metoden och för att skicka en POST-förfrågan från webbklienten. Antalet kort som ska dras bestäms genom att användaren väljer ett nummer i formulärinmatningen. Jag hade svårt att hämta ingångsvärdet och använda det i routen.</p>
+
+    <p>Min TIL för det här kursmoment var att jag kunde öva på klasskoncept och sessionshantering.</p>
 
     <h2 id="kmom03">Kmom03</h2>
     Coming soon...
