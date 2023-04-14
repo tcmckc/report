@@ -325,7 +325,7 @@ html {
 
 .site-footer {
   background-color: white;
-  color: black;
+  color: #578fe9;
   height: 200px;
   width: 100%;
   margin-top: 200px;
@@ -406,6 +406,10 @@ form {
   height: 20px;
   background-color: white;
   margin: 5px;
+}
+
+.site-header {
+  color: #578fe9;
 }
 
 .site-nav {
