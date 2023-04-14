@@ -47,7 +47,7 @@ class QuoteController extends AbstractController
             'Time' => date('H:i:s'),
             'Quote of the day' => $randomQuote,
         ];
-        
+
         return new JsonResponse($data);
     }
 }

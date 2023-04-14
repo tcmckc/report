@@ -1,0 +1,30 @@
+{% extends "base.html.twig" %}
+
+{% block title %}Deck{% endblock %}
+
+{% block main %}
+
+<main class="main">
+    <h1>Draw</h1>
+    <div id="card-container">
+        <div id="card-container1">
+            <ul id="cardgame-list">
+                <li><i><a href="{{ path('card') }}">Landing page</a></i></li>
+                <li><a href="{{ path('card-deck') }}">Deck</a></li>
+                <li><a href="{{ path('card-deck-shuffle') }}">Shuffle</a></li>
+            </ul>
+        </div>
+
+        <div class="card-container" id="card-container2">
+            {% for object in draw %}
+                <li class="card">{{ object.mark }}{{ object.value }}</li>
+            {% endfor %}
+        </div>
+    </div>
+
+    <div class="counter">
+        <h2>{{ counter }} cards left</h2>
+    </div>
+</main> 
+
+{% endblock %}

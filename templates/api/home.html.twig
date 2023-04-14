@@ -1,0 +1,42 @@
+{% extends "base.html.twig" %}
+
+{% block title %}Card{% endblock %}
+
+{% block main %}
+
+<h1>{{ title }}</h1>
+<h3>Get data in JSON</h3>
+
+<form>
+    <label>Get a quote: </label>
+    <input type="submit" name="quote" value="Quote"
+        onClick="this.form.action='{{ path('quote') }}';">
+</form>
+
+<hr>
+
+<form>
+    <label>Get a new deck: </label>
+    <input type="submit" name="deck" value="Deck"
+        onClick="this.form.action='{{ path('api-deck') }}';">
+</form>
+
+<form method="POST" action="{{ path('api-deck-shuffle') }}">
+    <label>Shuffle cards: </label>
+    <input type="submit" name="shuffle" value="Shuffle">
+</form>
+
+<form method="post" action="">
+    <label>Draw one card: </label>
+    <input type="submit" name="draw-one" value="Draw"
+        onClick="this.form.action='{{ path('api-deck-draw') }}';this.form.method='post';">
+</form>
+
+<form method="post" action="">
+    <label>Draw many cards as you wish: </label>
+    <input type="number" name="num_cards" min="2" max="52" value="2">
+    <input type="submit" name="draw-many" value="Draw" 
+        onClick="this.form.action=`/api/deck/draw/${this.form.num_cards.value}`;this.form.method='post';">
+</form>
+
+{% endblock %}
