@@ -69,7 +69,7 @@ class ApiController extends AbstractController
         ]);
     }
 
-    #[Route('/api/deck/draw/{num}', name: 'api-deck-draw-many', methods: ['POST'])]
+    #[Route('/api/deck/draw/:{num<\d+>}', name: 'api-deck-draw-many', methods: ['POST'])]
     public function drawDeckMany(
         Request $request,
         SessionInterface $session,

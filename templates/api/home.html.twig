@@ -30,13 +30,17 @@
     <label>Draw one card: </label>
     <input type="submit" name="draw-one" value="Draw"
         onClick="this.form.action='{{ path('api-deck-draw') }}';this.form.method='post';">
+    {# <input type="submit" name="draw-one" value="Draw"
+        onClick="this.form.action='{{ path('api-deck-draw') }}';this.form.method='post';"> #}
 </form>
 
 <form method="post" action="">
-    <label>Draw many cards as you wish: </label>
-    <input type="number" name="num_cards" min="2" max="52" value="2">
+    <label>Draw several cards: </label>
+    {# <input type="number" name="num_cards" min="2" max="52" value="2"> #}
     <input type="submit" name="draw-many" value="Draw" 
-        onClick="this.form.action=`/api/deck/draw/${this.form.num_cards.value}`;this.form.method='post';">
+        onClick="this.form.action=`{{ path('api-deck-draw-many', {'num': 5}) }}`;this.form.method='post';">
+    {# <input type="submit" name="draw-many" value="Draw" 
+        onClick="this.form.action=`/api/deck/draw/${this.form.num_cards.value}`;this.form.method='post';"> #}
 </form>
 
 {% endblock %}

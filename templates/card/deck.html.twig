@@ -10,8 +10,10 @@
         <div id="card-container1">
             <ul id="cardgame-list">
                 <li><i><a href="{{ path('card') }}">Landing page</a></i></li>
-                <li><a href="{{ path('card-deck') }}">Deck</a></li>
-                <li><a href="{{ path('card-deck-shuffle') }}">Shuffle</a></li>
+                <li><a href="{{ path('card-deck') }}">Get a new deck</a></li>
+                <li><a href="{{ path('card-deck-shuffle') }}">Shuffle deck</a></li>
+                <li><a href="{{ path('card-deck-draw') }}">Draw one card</a></li>
+                <li><a href="{{ path('card-deck-draw-many', {'num': 5}) }}">Draw several cards</a></li>
             </ul>
         </div>
 

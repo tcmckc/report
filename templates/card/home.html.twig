@@ -8,21 +8,24 @@
 
 <ul id="cardgame-list">
     <li><i><a href="{{ path('card') }}">Landing page</a></i></li>
-    <li><a href="{{ path('card-deck') }}">Deck</a></li>
-    <li><a href="{{ path('card-deck-shuffle') }}">Shuffle</a></li>
+    <li><a href="{{ path('card-deck') }}">Get a new deck</a></li>
+    <li><a href="{{ path('card-deck-shuffle') }}">Shuffle deck</a></li>
+    <li><a href="{{ path('card-deck-draw') }}">Draw one card</a></li>
+    <li><a href="{{ path('card-deck-draw-many', {'num': 5}) }}">Draw several cards</a></li>
 </ul>
 
-<form>
+{# <form>
     <label>Draw one card: </label>
-    <input type="submit" name="draw-many" value="Draw" 
-        onClick="this.form.action=`/card/deck/draw`;">
-</form>
+    <input type="submit" name="draw" value="Draw" 
+        onClick="this.form.action='{{ path('card-deck-draw') }}';">
+</form> #}
 
-<form>
+{# <form>
     <label>Draw many cards as you wish: </label>
     <input type="number" name="num_cards" min="2" max="52" value="2">
-    <input type="submit" name="draw-many" value="Draw" 
-        onClick="this.form.action=`/card/deck/draw/${this.form.num_cards.value}`;">
-</form>
+    <input type="submit" name="draw-many" value="Draw"
+        onClick="this.form.action='{{ path('card-deck-draw-many', {'num': $nr}) }}';">
+</form> #}
+
 
 {% endblock %}

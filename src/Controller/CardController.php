@@ -71,10 +71,10 @@ class CardController extends AbstractController
         return $this->render('card/deck-draw.html.twig', $data);
     }
 
-    #[Route("/card/deck/draw/{num}", name: "card-deck-draw-many")]
+    #[Route("/card/deck/draw/:{num<\d+>}", name: "card-deck-draw-many")]
     public function drawMany(
         SessionInterface $session,
-        int $num = 1
+        int $num
     ): Response {
         if ($num > 51) {
             throw new \Exception("You cannot draw so many cards!");
