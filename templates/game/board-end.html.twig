@@ -1,0 +1,31 @@
+{% extends "base.html.twig" %}
+
+{% block title %}Game{% endblock %}
+
+{% block main %}
+
+<h1>Game</h1>
+
+<h2>Banker's card  [Score: {{ banker_score }}]</h2>
+
+<div class="card-container" id="card-container2">
+    {% for card in banker_hand %}
+        <li class="card">{{ card["suit"] }}{{ card["value"] }}</li>
+    {% endfor %}
+</div>
+
+<h2>Your card  [Score: {{ player_score }}]</h2>
+    <div class="card-container" id="card-container2">
+        {% for card in player_hand %}
+            <li class="card">{{ card["suit"] }}{{ card["value"] }}</li>
+        {% endfor %}
+    </div>
+
+<h1>{{ result }}</h1>
+
+<form method="POST" action="{{ path('game-reset', {'draw': true}) }}">
+    <input type="submit" name="new-game" value="New Game">
+</form>
+
+
+{% endblock %}

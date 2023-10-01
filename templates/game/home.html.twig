@@ -1,0 +1,21 @@
+{% extends "base.html.twig" %}
+
+{% block title %}Game 21{% endblock %}
+
+{% block main %}
+
+<h1>Game</h1>
+<p>This game is a card game similar to Black Jack where you have to get as close to 21 points as possible without going over.</p>
+<p>The game is played with a bank and a player (you!). Cards have specific values: Aces are 1, Kings are 13, Queens are 12, and Jacks are 11, while number cards are worth their face value.</p>
+<p>The game begins with a player dealt one card, and then you can choose to draw additional cards to improve hand but risk going over 21. A player can choose to stay once you are satisfied with own hand. Afterward, it will be a bank's turn to play.</p>
+
+<form method="POST" action="{{ path('game-reset', {'draw': true}) }}">
+    <input type="submit" name="start-game" value="Start Game">
+</form>
+
+<form>
+    <input type="submit" name="quote" value="Go to Documentation"
+        onClick="this.form.action='{{ path('game-doc') }}';">
+</form>
+
+{% endblock %}

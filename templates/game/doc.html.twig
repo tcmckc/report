@@ -1,0 +1,21 @@
+{% extends "base.html.twig" %}
+
+{% block title %}Game 21{% endblock %}
+
+{% block main %}
+
+<h1>Documentation</h1>
+
+<h2>Flowchart</h2>
+<a href="{{ absolute_url("../img/Game_flowchart.png") }}"><img src="../img/Game_flowchart.png" class="game-img" alt="Flowchart"></a>
+
+<h2>Psuedo code</h2>
+<a href="{{ absolute_url("../img/psuedo.png") }}"><img src="../img/psuedo.png" class="game-img" alt="Psuedo code"></a>
+
+<h2>Class</h2>
+<p>Three classes is created for the this game: Game, Deck and Score.</p>
+<p>The deck class initiate a new deck and also can shuffle the deck.</p>
+<p>The game class is the main class for the game. It initiate a new game and also contains the logic for the game.</p>
+<p>The score class is used to keep track of the score for the game.</p>
+
+{% endblock %}

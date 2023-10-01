@@ -12,24 +12,43 @@ class Deck extends Card
     public array $marks = ["❤️", "♦️", "♠️", "♣️"];
     public array $values = ['A', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'J', 'Q', 'K'];
 
-
+    /**
+     * Constructor for initializing the Deck
+     */
     public function __construct()
     {
-        $this->deck = [];
+        //$this->deck = [];
+        $this->deck = $this->getDeck();
     }
 
-    public function getDeck(Card $card)
+    /**
+     * Generate a new deck of cards
+     *
+     * @return array An array representing a standard deck of cards with "mark" and "value" keys
+     */
+    public function getDeck()
     {
-        $this->deck = [];
+        //$this->deck = [];
+        $deck = [];
 
-        for ($i = 0; $i < count($this->marks); $i++) {
-            for ($ii = 0; $ii < count($this->values); $ii++) {
-                $item = $card->setCard($this->marks[$i], $this->values[$ii]);
-
-                array_push($this->deck, $item);
+        foreach ($this->marks as $mark) {
+            foreach ($this->values as $value) {
+                $deck[] = [
+                    "mark" => $mark,
+                    "value" => $value,
+                ];
             }
         }
-        return $this->deck;
+
+        // for ($i = 0; $i < count($this->marks); $i++) {
+        //     for ($ii = 0; $ii < count($this->values); $ii++) {
+        //         $item = $card->setCard($this->marks[$i], $this->values[$ii]);
+
+        //         array_push($this->deck, $item);
+        //     }
+        // }
+        //return $this->deck;
+        return $deck;
     }
 
     public function getShuffle($deckToShuffle = null)
@@ -40,6 +59,12 @@ class Deck extends Card
         shuffle($deckToShuffle);
         return $deckToShuffle;
 
+    }
+
+    public function shuffleDeck()
+    {
+        shuffle($this->deck);
+        return $this->deck;
     }
 
     public function drawCard(int $num = 1)

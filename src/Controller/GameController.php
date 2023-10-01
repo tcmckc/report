@@ -13,14 +13,13 @@ use Symfony\Component\HttpFoundation\Request;
 use App\Card\Card;
 use App\Game\Deck;
 use App\Game\Game;
-use App\Game\Hand;
 use App\Game\Score;
 
 class GameController extends AbstractController
 {
     /**
      * @Route("/game/", name="game")
-     * 
+     *
      * Print out rule and start button
      */
     public function game(): Response
@@ -30,63 +29,57 @@ class GameController extends AbstractController
 
     /**
      * @Route("/game/board", name="game-board")
+     *
+     * Prepare the game with a deck of cards, player and banker hands & scores
      */
-    public function gameBoard(SessionInterface $session, Request $request): Response 
+    public function gameBoard(SessionInterface $session, Request $request): Response
     {
         $game = $session->get("game") ?? new Game();
         $session->set("game", $game);
-
-        $game_deck = $game->getGameDeck();
-        $player_hand = $game->getPlayerHand();
-
-        $data = [
-            "game_deck" => $game_deck,
-            "player_hand" => $player_hand,
-            "player_score" => 0,
-            "result" => null,
-        ];
+        $data = $game->prepareGame();
 
         return $this->render('game/board.html.twig', $data);
     }
 
-    /** 
+    /**
      * @Route("/game/draw-card", name="draw-card", methods={"POST"})
+     *
+     * Draw a card from the deck and add it to the player's hand
     */
-    public function drawCard(SessionInterface $session, Request $request): Response 
+    public function drawCard(SessionInterface $session, Request $request): Response
     {
         $game = $session->get("game");
-        $game_deck = $game->getGameDeck();
-        $drawn_card = $game_deck->drawCard();
-        $player_hand = $game->addCard($drawn_card);
+        $data = $game->drawCardForPlayer();
+        $result = ($data["player_score"] > 21) ? "Banker wins! You got more than 21 points." : null;
+        $data["result"] = $result;
+
+        return $this->render(($result ? "game/board-end.html.twig" : "game/board.html.twig"), $data);
+    }
+
+    /**
+     * @Route("/game/stay", name= "stay", methods={"POST"})
+     *
+     */
+    public function stay(SessionInterface $session, Score $score): Response
+    {
+        $game = $session->get("game");
+        $bankerData = $game->playBanker();
 
         $player_score = $game->getScore("player");
+        $banker_score = $bankerData["banker_score"];
 
-        if ($player_score > 21) {
-            $data = [
-                "player_hand" => $player_hand,
-                "game_deck" => $game_deck,
-                "player_score" => $player_score,
-                "result" => "Banker wins! You got more than 21 points.",
-            ];
-
-            return $this->render("game/board-end.html.twig", $data);
-        }
+        $result = $score->determineWinner($player_score, $banker_score);
 
         $data = [
-            "player_hand" => $player_hand,
-            "game_deck" => $game_deck,
+            "player_hand" => $game->getPlayerHand(),
+            "game_deck" => $game->getGameDeck(),
             "player_score" => $player_score,
-            "result" => null,
+            "banker_hand" => $bankerData["banker_hand"],
+            "banker_score" => $banker_score,
+            "result" => $result,
         ];
 
-        return $this->render("game/board.html.twig", $data);
-        
-
-        $data = [
-            'player_cards' => $player_cards,
-        ];
-
-        return $this->redirectToRoute('game-board', $data);
+        return $this->render("game/board-end.html.twig", $data);
     }
 
     /**
@@ -98,8 +91,11 @@ class GameController extends AbstractController
         return $this->redirectToRoute("game-board");
     }
 
-    #[Route("/game/doc", name: "game-doc")]
-    public function gameDoc(): Response {
+    /**
+     * @Route("/game/doc", name="game-doc")
+     */
+    public function gameDoc(): Response
+    {
         return $this->render('game/doc.html.twig');
     }
 }

@@ -1,0 +1,53 @@
+{% extends "base.html.twig" %}
+
+{% block title %}Game{% endblock %}
+
+{% block main %}
+
+<h1>Game</h1>
+
+<h2>Banker's card  [Score: {{ banker_score }}]</h2>
+
+<div class="card-container" id="card-container2">
+    {% if banker_hand is not empty %}
+        {% for card in banker_hand %}
+            <li class="card">{{ card["suit"] }}{{ card["value"] }}</li>
+        {% endfor %}
+    {% else %}
+        <li class="card">?</li>
+
+    {% endif %}
+
+    {% for card in banker_hand %}
+        <li class="card">{{ card["suit"] }}{{ card["value"] }}</li>
+    {% endfor %}
+</div>
+
+<h2>Your card  [Score: {{ player_score }}]</h2>
+    
+    <div class="card-container" id="card-container2">
+        {% for card in player_hand %}
+            <li class="card">{{ card["suit"] }}{{ card["value"] }}</li>
+        {% endfor %}
+    </div>
+    {% if result != null %}
+        <h1>{{ result }}</h1>
+    {% else %}
+        <p></p>
+    {% endif %}
+
+<form method="POST" action="{{ path('draw-card') }}">
+    <input type="submit" name="draw" value="Draw a card">
+</form>
+
+<form method="POST" action="{{ path('stay', {'draw': true}) }}">
+    <input type="submit" name="stay" value="Stay">
+</form>
+
+{# {{ dump(result) }}
+
+{{ dump(player_hand) }}
+
+{{ dump(game_deck)}} #}
+
+{% endblock %}

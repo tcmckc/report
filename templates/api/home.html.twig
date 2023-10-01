@@ -43,4 +43,10 @@
         onClick="this.form.action=`/api/deck/draw/${this.form.num_cards.value}`;this.form.method='post';"> #}
 </form>
 
+<form>
+    <label>Get a game: </label>
+    <input type="submit" name="game" value="Game"
+        onClick="this.form.action='{{ path('api-game') }}';">
+</form>
+
 {% endblock %}

@@ -89,4 +89,20 @@ class ApiController extends AbstractController
             'counter' => $counter,
         ]);
     }
+
+    #[Route("/api/game", name: "api-game")]
+    public function game(
+        SessionInterface $session
+    ): Response {
+        $game = $session->get("game");
+        $data = [
+            'title' => 'Game',
+            'game deck' => $game->getGameDeck(),
+            'player hand' => $game->getPlayerHand(),
+            'total score for player' => $game->getScore("player"),
+            'banker hand' => $game->getBankerHand(),
+            'total score for banker' => $game->getScore("banker"),
+        ];
+        return new JsonResponse($data);
+    }
 }
