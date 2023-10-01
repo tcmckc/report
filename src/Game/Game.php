@@ -3,14 +3,12 @@
 namespace App\Game;
 
 use App\Game\Deck;
-use App\Game\Score;
 
 class Game
 {
     private Deck $deck;
     private $player;
     private $banker;
-    private Score $score;
 
     public function __construct()
     {
@@ -18,7 +16,6 @@ class Game
         $this->deck->shuffleDeck();
         $this->player = [];
         $this->banker = [];
-        $this->score = new Score();
     }
 
     public function getGameDeck()
@@ -38,26 +35,26 @@ class Game
 
     public function prepareGame(): array
     {
-        $player_hand = $this->getPlayerHand();
-        $banker_hand = $this->getBankerHand();
+        $playerHand = $this->getPlayerHand();
+        $bankerHand = $this->getBankerHand();
 
-        $player_score = empty($player_hand) ? 0 : $this->getScore("player");
-        $banker_score = empty($banker_hand) ? 0 : $this->getScore("banker");
+        $playerScore = empty($playerHand) ? 0 : $this->getScore("player");
+        $bankerScore = empty($bankerHand) ? 0 : $this->getScore("banker");
 
         return [
             "game_deck" => $this->getGameDeck(),
-            "player_hand" => $player_hand,
-            "player_score" => $player_score,
-            "banker_hand" => $banker_hand,
-            "banker_score" => $banker_score,
+            "player_hand" => $playerHand,
+            "player_score" => $playerScore,
+            "banker_hand" => $bankerHand,
+            "banker_score" => $bankerScore,
             "result" => null,
         ];
     }
 
     public function drawCardForPlayer(): array
     {
-        $drawn_card = $this->deck->drawCard();
-        $this->player = $this->addCard($drawn_card, "player");
+        $drawnCard = $this->deck->drawCard();
+        $this->player = $this->addCard($drawnCard, "player");
         return [
             "player_hand" => $this->player,
             "player_score" => $this->getScore("player"),
@@ -71,27 +68,26 @@ class Game
         if ($who === 'player') {
             $this->player[] = $card;
             return $this->player;
-        } else {
-            $this->banker[] = $card;
-            return $this->banker;
         }
+        $this->banker[] = $card;
+        return $this->banker;
     }
 
     public function playBanker(): array
     {
-        $game_deck = $this->getGameDeck();
-        $banker_hand = $this->getBankerHand();
-        $banker_score = $this->getScore("banker");
+        $gameDeck = $this->getGameDeck();
+        $bankerHand = $this->getBankerHand();
+        $bankerScore = $this->getScore("banker");
 
-        while ($banker_score < 17) {
-            $drawn_card = $game_deck->drawCard();
-            $banker_hand = $this->addCard($drawn_card, "banker");
-            $banker_score = $this->getScore("banker");
+        while ($bankerScore < 17) {
+            $drawnCard = $gameDeck->drawCard();
+            $bankerHand = $this->addCard($drawnCard, "banker");
+            $bankerScore = $this->getScore("banker");
         }
 
         return [
-            "banker_hand" => $banker_hand,
-            "banker_score" => $banker_score,
+            "banker_hand" => $bankerHand,
+            "banker_score" => $bankerScore,
         ];
 
     }
@@ -105,22 +101,23 @@ class Game
         foreach ($hand as $card) {
             $value = $card['value'];
 
-            if (is_numeric($value)) {
-                $score += (int)$value;
-            } elseif ($value === 'A') {
-                $score += 1;
-            } elseif ($value === 'J') {
-                $score += 11;
-            } elseif ($value === 'Q') {
-                $score += 12;
-            } elseif ($value === 'K') {
-                $score += 13;
-            } else {
-                $score += 10;
-            }
+            $score += (is_numeric($value)) ? (int) $value : (($value === 'A') ? 1 : (($value === 'J') ? 11 : (($value === 'Q') ? 12 : (($value === 'K') ? 13 : 10))));
         }
 
         return $score;
+    }
+
+    public function determineWinner($playerScore, $bankerScore): string
+    {
+        if ($bankerScore > 21) {
+            return "You win! Banker got more than 21 points.";
+        } elseif ($playerScore > $bankerScore) {
+            return "You win! You got more points than banker.";
+        } elseif ($playerScore < $bankerScore) {
+            return "Banker wins! Banker got more points than you.";
+        }
+
+        return "It's a tie! You and banker got the same points.";
     }
 
 }

@@ -2,18 +2,13 @@
 
 namespace App\Controller;
 
-use App\Card\Deck;
-use App\Card\Card;
-
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
-
 use Symfony\Component\HttpFoundation\JsonResponse;
-use Symfony\Component\Routing\Generator\UrlGeneratorInterface;
-
-use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Session\SessionInterface;
+use App\Card\Deck;
+use App\Card\Card;
 
 class CardController extends AbstractController
 {
@@ -27,13 +22,12 @@ class CardController extends AbstractController
     public function deck(
         SessionInterface $session
     ): Response {
-        $cardObj = new Card();
         $deckObj = new Deck();
         $session->set("deck", $deckObj);
 
         $data = [
             'title' => 'Deck',
-            'deck' => $deckObj->getDeck($cardObj),
+            'deck' => $deckObj->getDeck(),
         ];
 
         return $this->render('card/deck.html.twig', $data);
@@ -55,7 +49,6 @@ class CardController extends AbstractController
 
     #[Route("/card/deck/draw", name: "card-deck-draw")]
     public function drawOne(
-        Request $request,
         SessionInterface $session
     ): Response {
         $deck = $session->get('deck');
@@ -76,9 +69,9 @@ class CardController extends AbstractController
         SessionInterface $session,
         int $num
     ): Response {
-        if ($num > 51) {
-            throw new \Exception("You cannot draw so many cards!");
-        }
+        // if ($num > 51) {
+        //     throw new \Exception("You cannot draw so many cards!");
+        // }
 
         $deck = $session->get('deck');
         $drawedCard = $deck->drawCard($num);

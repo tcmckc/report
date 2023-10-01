@@ -13,7 +13,6 @@ use Symfony\Component\HttpFoundation\Request;
 use App\Card\Card;
 use App\Game\Deck;
 use App\Game\Game;
-use App\Game\Score;
 
 class GameController extends AbstractController
 {
@@ -32,7 +31,7 @@ class GameController extends AbstractController
      *
      * Prepare the game with a deck of cards, player and banker hands & scores
      */
-    public function gameBoard(SessionInterface $session, Request $request): Response
+    public function gameBoard(SessionInterface $session): Response
     {
         $game = $session->get("game") ?? new Game();
         $session->set("game", $game);
@@ -46,7 +45,7 @@ class GameController extends AbstractController
      *
      * Draw a card from the deck and add it to the player's hand
     */
-    public function drawCard(SessionInterface $session, Request $request): Response
+    public function drawCard(SessionInterface $session): Response
     {
         $game = $session->get("game");
         $data = $game->drawCardForPlayer();
@@ -60,22 +59,22 @@ class GameController extends AbstractController
      * @Route("/game/stay", name= "stay", methods={"POST"})
      *
      */
-    public function stay(SessionInterface $session, Score $score): Response
+    public function stay(SessionInterface $session): Response
     {
         $game = $session->get("game");
         $bankerData = $game->playBanker();
 
-        $player_score = $game->getScore("player");
-        $banker_score = $bankerData["banker_score"];
+        $playerScore = $game->getScore("player");
+        $bankerScore = $bankerData["banker_score"];
 
-        $result = $score->determineWinner($player_score, $banker_score);
+        $result = $game->determineWinner($playerScore, $bankerScore);
 
         $data = [
             "player_hand" => $game->getPlayerHand(),
             "game_deck" => $game->getGameDeck(),
-            "player_score" => $player_score,
+            "player_score" => $playerScore,
             "banker_hand" => $bankerData["banker_hand"],
-            "banker_score" => $banker_score,
+            "banker_score" => $bankerScore,
             "result" => $result,
         ];
 

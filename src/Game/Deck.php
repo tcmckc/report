@@ -22,18 +22,7 @@ class Deck extends Card
             foreach ($values as $value) {
                 $score = 0;
 
-                // Assign scores based on card values
-                if ($value === 'A') {
-                    $score = 1;
-                } elseif ($value === 'J') {
-                    $score = 11;
-                } elseif ($value === 'Q') {
-                    $score = 12;
-                } elseif ($value === 'K') {
-                    $score = 13;
-                } else {
-                    $score = (int)$value;
-                }
+                $score = ($value === 'A') ? 1 : (($value === 'J') ? 11 : (($value === 'Q') ? 12 : (($value === 'K') ? 13 : (int) $value)));
 
                 $this->cards[] = [
                     "suit" => $suit,

@@ -28,7 +28,6 @@ class Deck extends Card
      */
     public function getDeck()
     {
-        //$this->deck = [];
         $deck = [];
 
         foreach ($this->marks as $mark) {
@@ -39,15 +38,6 @@ class Deck extends Card
                 ];
             }
         }
-
-        // for ($i = 0; $i < count($this->marks); $i++) {
-        //     for ($ii = 0; $ii < count($this->values); $ii++) {
-        //         $item = $card->setCard($this->marks[$i], $this->values[$ii]);
-
-        //         array_push($this->deck, $item);
-        //     }
-        // }
-        //return $this->deck;
         return $deck;
     }
 
@@ -71,13 +61,9 @@ class Deck extends Card
     {
         $cards = [];
 
-        for ($i = 0; $i < $num; $i++) {
-            if ($this->countCards() == 0) {
-                break;
-            } else {
-                $item = array_shift($this->deck);
-                array_push($cards, $item);
-            }
+        for ($i = 0; $i < $num && $this->countCards() > 0; $i++) {
+            $item = array_shift($this->deck);
+            array_push($cards, $item);
         }
 
         return $cards;
