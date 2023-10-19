@@ -1,4 +1,6 @@
 {
+    "name" : "mvc/report",
+    "description": "MVC Report",
     "type": "project",
     "license": "proprietary",
     "minimum-stability": "stable",
@@ -46,7 +48,7 @@
         "twig/twig": "^2.12|^3.0"
     },
     "require-dev": {
-        "phpunit/phpunit": "^9.5",
+        "phpunit/phpunit": "^10",
         "symfony/browser-kit": "6.1.*",
         "symfony/css-selector": "6.1.*",
         "symfony/debug-bundle": "6.1.*",
@@ -104,7 +106,10 @@
         "lint": [
             "@phpmd",
             "@phpstan"
-        ]
+        ],
+        "phpunit": "XDEBUG_MODE=coverage vendor/bin/phpunit",
+        "test": "XDEBUG_MODE=coverage /usr/local/bin/php -d zend_extension=/path/to/xdebug.so ./vendor/bin/phpunit",
+        "phpdoc": "tools/phpdoc/phpdoc"
     },
     "conflict": {
         "symfony/symfony": "*"
