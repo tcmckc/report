@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1697729234">
-  <project timestamp="1697729234">
+<coverage generated="1697744063">
+  <project timestamp="1697744063">
     <file name="/Users/Tomoko1/dbwebb-kurser/mvc/me/report/src/Card/Card.php">
       <class name="App\Card\Card" namespace="global">
         <metrics complexity="1" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="5" coveredstatements="0" elements="6" coveredelements="0"/>
@@ -275,21 +275,21 @@
       <class name="App\Game\Deck" namespace="global">
         <metrics complexity="10" methods="4" coveredmethods="4" conditionals="0" coveredconditionals="0" statements="17" coveredstatements="17" elements="21" coveredelements="21"/>
       </class>
-      <line num="14" type="method" name="__construct" visibility="public" complexity="7" crap="7" count="9"/>
-      <line num="16" type="stmt" count="9"/>
-      <line num="18" type="stmt" count="9"/>
-      <line num="19" type="stmt" count="9"/>
-      <line num="21" type="stmt" count="9"/>
-      <line num="22" type="stmt" count="9"/>
-      <line num="23" type="stmt" count="9"/>
-      <line num="25" type="stmt" count="9"/>
-      <line num="27" type="stmt" count="9"/>
-      <line num="28" type="stmt" count="9"/>
-      <line num="29" type="stmt" count="9"/>
-      <line num="30" type="stmt" count="9"/>
-      <line num="31" type="stmt" count="9"/>
-      <line num="36" type="method" name="shuffleDeck" visibility="public" complexity="1" crap="1" count="8"/>
-      <line num="38" type="stmt" count="8"/>
+      <line num="14" type="method" name="__construct" visibility="public" complexity="7" crap="7" count="10"/>
+      <line num="16" type="stmt" count="10"/>
+      <line num="18" type="stmt" count="10"/>
+      <line num="19" type="stmt" count="10"/>
+      <line num="21" type="stmt" count="10"/>
+      <line num="22" type="stmt" count="10"/>
+      <line num="23" type="stmt" count="10"/>
+      <line num="25" type="stmt" count="10"/>
+      <line num="27" type="stmt" count="10"/>
+      <line num="28" type="stmt" count="10"/>
+      <line num="29" type="stmt" count="10"/>
+      <line num="30" type="stmt" count="10"/>
+      <line num="31" type="stmt" count="10"/>
+      <line num="36" type="method" name="shuffleDeck" visibility="public" complexity="1" crap="1" count="9"/>
+      <line num="38" type="stmt" count="9"/>
       <line num="41" type="method" name="drawCard" visibility="public" complexity="1" crap="1" count="3"/>
       <line num="43" type="stmt" count="3"/>
       <line num="44" type="stmt" count="3"/>
@@ -300,13 +300,13 @@
     </file>
     <file name="/Users/Tomoko1/dbwebb-kurser/mvc/me/report/src/Game/Game.php">
       <class name="App\Game\Game" namespace="global">
-        <metrics complexity="24" methods="10" coveredmethods="9" conditionals="0" coveredconditionals="0" statements="56" coveredstatements="49" elements="66" coveredelements="58"/>
+        <metrics complexity="24" methods="10" coveredmethods="9" conditionals="0" coveredconditionals="0" statements="56" coveredstatements="53" elements="66" coveredelements="62"/>
       </class>
-      <line num="13" type="method" name="__construct" visibility="public" complexity="1" crap="1" count="7"/>
-      <line num="15" type="stmt" count="7"/>
-      <line num="16" type="stmt" count="7"/>
-      <line num="17" type="stmt" count="7"/>
-      <line num="18" type="stmt" count="7"/>
+      <line num="13" type="method" name="__construct" visibility="public" complexity="1" crap="1" count="8"/>
+      <line num="15" type="stmt" count="8"/>
+      <line num="16" type="stmt" count="8"/>
+      <line num="17" type="stmt" count="8"/>
+      <line num="18" type="stmt" count="8"/>
       <line num="21" type="method" name="getGameDeck" visibility="public" complexity="1" crap="1" count="3"/>
       <line num="23" type="stmt" count="3"/>
       <line num="26" type="method" name="getPlayerHand" visibility="public" complexity="1" crap="1" count="2"/>
@@ -360,15 +360,15 @@
       <line num="102" type="stmt" count="2"/>
       <line num="104" type="stmt" count="2"/>
       <line num="107" type="stmt" count="3"/>
-      <line num="110" type="method" name="determineWinner" visibility="public" complexity="4" crap="20" count="0"/>
-      <line num="112" type="stmt" count="0"/>
+      <line num="110" type="method" name="determineWinner" visibility="public" complexity="4" crap="5.26" count="1"/>
+      <line num="112" type="stmt" count="1"/>
       <line num="113" type="stmt" count="0"/>
-      <line num="114" type="stmt" count="0"/>
+      <line num="114" type="stmt" count="1"/>
       <line num="115" type="stmt" count="0"/>
-      <line num="116" type="stmt" count="0"/>
-      <line num="117" type="stmt" count="0"/>
+      <line num="116" type="stmt" count="1"/>
+      <line num="117" type="stmt" count="1"/>
       <line num="120" type="stmt" count="0"/>
-      <metrics loc="124" ncloc="124" classes="1" methods="10" coveredmethods="9" conditionals="0" coveredconditionals="0" statements="56" coveredstatements="49" elements="66" coveredelements="58"/>
+      <metrics loc="124" ncloc="124" classes="1" methods="10" coveredmethods="9" conditionals="0" coveredconditionals="0" statements="56" coveredstatements="53" elements="66" coveredelements="62"/>
     </file>
     <file name="/Users/Tomoko1/dbwebb-kurser/mvc/me/report/src/Kernel.php">
       <class name="App\Kernel" namespace="global">
@@ -376,6 +376,6 @@
       </class>
       <metrics loc="12" ncloc="12" classes="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
     </file>
-    <metrics files="13" loc="763" ncloc="697" classes="11" methods="48" coveredmethods="13" conditionals="0" coveredconditionals="0" statements="249" coveredstatements="66" elements="297" coveredelements="79"/>
+    <metrics files="13" loc="763" ncloc="697" classes="11" methods="48" coveredmethods="13" conditionals="0" coveredconditionals="0" statements="249" coveredstatements="70" elements="297" coveredelements="83"/>
   </project>
 </coverage>

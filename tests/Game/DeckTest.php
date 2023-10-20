@@ -5,14 +5,10 @@ namespace App\Game;
 use PHPUnit\Framework\TestCase;
 
 /**
- * Test cases for class Dice.
+ * Test cases for class Deck.
  */
 class DeckTest extends TestCase
 {
-    /**
-     * Construct object and verify that the object has the expected
-     * properties, use no arguments.
-     */
     public function testCreateDeck()
     {
         $deck = new Deck();
@@ -26,5 +22,7 @@ class DeckTest extends TestCase
         $deck = new Deck();
         $res = $deck->drawCard();
         $this->assertNotEmpty($res);
+        $this->assertIsArray($res);
+        $this->assertArrayHasKey("suit", $res);
     }
 }

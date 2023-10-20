@@ -27,6 +27,7 @@ class GameTest extends TestCase
 
         $res = $game->getPlayerHand();
         $this->assertEmpty($res);
+        $this->assertIsArray($res);
     }
 
     public function testGetBankerHand()
@@ -35,6 +36,7 @@ class GameTest extends TestCase
 
         $res = $game->getBankerHand();
         $this->assertEmpty($res);
+        $this->assertIsArray($res);
     }
 
     public function testPrepareGame()
@@ -43,6 +45,7 @@ class GameTest extends TestCase
 
         $res = $game->prepareGame();
         $this->assertNotEmpty($res);
+        $this->assertIsArray($res);
     }
 
     public function testDrawCardForPlayer()
@@ -51,6 +54,7 @@ class GameTest extends TestCase
 
         $res = $game->drawCardForPlayer();
         $this->assertNotEmpty($res);
+        $this->assertIsArray($res);
     }
 
     public function testPlayBanker()
@@ -59,6 +63,8 @@ class GameTest extends TestCase
 
         $res = $game->playBanker();
         $this->assertNotEmpty($res);
+        $this->assertIsArray($res);
+        $this->assertArrayHasKey("banker_hand", $res);
     }
 
     public function testGetScore()
@@ -67,5 +73,15 @@ class GameTest extends TestCase
 
         $res = $game->getScore("player");
         $this->assertIsInt($res);
+        $this->assertGreaterThanOrEqual(0, $res);
+    }
+
+    public function testDetermineWinner()
+    {
+        $game = new Game();
+
+        $res = $game->determineWinner(10, 20);
+        $this->assertIsString($res);
+        $this->assertEquals("Banker wins! Banker got more points than you.", $res);
     }
 }
