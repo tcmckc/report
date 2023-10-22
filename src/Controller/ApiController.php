@@ -11,6 +11,9 @@ use Symfony\Component\HttpFoundation\Session\SessionInterface;
 use Symfony\Component\HttpFoundation\Request;
 use App\Card\Card;
 use App\Card\Deck;
+use App\Entity\Library;
+use Doctrine\Persistence\ManagerRegistry;
+use App\Repository\LibraryRepository;
 
 class ApiController extends AbstractController
 {
@@ -102,5 +105,24 @@ class ApiController extends AbstractController
             'total score for banker' => $game->getScore("banker"),
         ];
         return new JsonResponse($data);
+    }
+
+    #[Route("/api/library/books", name: "api-library-books")]
+    public function library(
+        LibraryRepository $libraryRepository
+    ): Response {
+        $library = $libraryRepository->findAll();
+
+        return $this->json($library);
+    }
+
+    #[Route("api/library/book/{isbn}", name: "api-library-books-isbn")]
+    public function libraryByIsbn(
+        ?string $isbn = '9789174296006',
+        LibraryRepository $libraryRepository
+    ): Response {
+        $libraryItem = $libraryRepository->findOneBy(['isbn' => $isbn]);
+        
+        return $this->json($libraryItem);
     }
 }

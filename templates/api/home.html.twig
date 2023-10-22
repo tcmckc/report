@@ -49,4 +49,17 @@
         onClick="this.form.action='{{ path('api-game') }}';">
 </form>
 
+<form>
+    <label>Get library: </label>
+    <input type="submit" name="library" value="Library"
+        onClick="this.form.action='{{ path('api-library-books') }}';">
+</form>
+
+<form method="get" action="{{ path('api-library-books-isbn', {'isbn': '9789174296006'}) }}">
+    <label>Get a book by ISBN: </label>
+    <input type="text" name="isbn" placeholder="9789174296006">
+    <input type="submit" value="Search">
+</form>
+
+
 {% endblock %}

@@ -16,8 +16,7 @@ class LibraryController extends AbstractController
     public function showAllLibrary(
         LibraryRepository $libraryRepository
     ): Response {
-        $library = $libraryRepository
-            ->findAll();
+        $library = $libraryRepository->findAll();
 
         return $this->render('library/home.html.twig', [
             'constoller_name' => 'LibraryController',
