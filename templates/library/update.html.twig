@@ -1,0 +1,37 @@
+{% extends "base.html.twig" %}
+
+{% block title %}Add{% endblock %}
+
+{% block main %}
+
+<body>
+    <div>
+        <a href="{{ path("library") }}">Back</a>
+    </div>
+    <h1>Update details</h1>
+        <div class="library-container">
+            <img src="{{ library.image }}" alt="Book image" width="260" height="390" style="margin-bottom: 15px;">
+            
+            <form class="library-form" method="post" action="{{ path('library_update', {'id': library.id}) }}">
+                <label>Title:</label>
+                <input type="text" name="title" value="{{library.title}}">
+                
+                <label>Author:</label>
+                <input type="text" name="author" value="{{library.author}}">
+                
+                <label>ISBN:</label>
+                <input type="text" name="isbn" value="{{library.isbn}}">
+                
+                <label>Image:</label>
+                <input type="text" name="image" value="{{library.image}}">
+                
+                <input type="submit" value="Update">
+            </form>
+        </div>
+        
+    </body>
+
+
+
+
+{% endblock %}

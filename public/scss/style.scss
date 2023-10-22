@@ -77,6 +77,18 @@ form {
     margin: 20px;
 }
 
+table {
+    margin: 20px;
+    padding: 40px;
+    text-align: left;
+    border-collapse: collapse;
+}
+
+td, th {
+    border: 1px solid darkblue;
+    padding: 10px;
+}
+
 .main {
     width: 100%;
 }
@@ -107,6 +119,33 @@ form {
 
 .game-img {
     width: 50%;
+}
+
+.library-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.library-form input{
+    margin-bottom: 20px;
+    padding: 10px;
+    width: 100%;
+}
+
+.button-wrapper a {
+    display: inline-block;
+    background-color: blue;
+    color: white;
+    padding: 8px 15px;
+    text-align: center;
+    text-decoration: none; 
+    border-radius: 5px; 
+    border: none;
+    cursor: pointer;
+}
+
+.button-wrapper a:hover {
+    background-color: grey;
 }
 
 #card-container {

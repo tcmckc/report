@@ -1,0 +1,31 @@
+{% extends "base.html.twig" %}
+
+{% block title %}Library{% endblock %}
+
+{% block main %}
+<main class="main">
+    <h1>Library</h1>
+
+    <div>
+        <div class="button-wrapper">
+            <li><a href="{{ path("library_add") }}">Add New</a></li>
+        </div>
+    </div>
+    <table>
+        {% for i in library %}
+            <tr>
+                <td><img src="{{ i.image }}" alt="Book Cover"></td>
+                <td>
+                    <b>Title:</b> {{ i.title }}<br>
+                    <b>Author:</b> {{ i.author }}<br>
+                    <b>ISBN:</b> {{ i.isbn }}<br>
+                </td>
+                <td>
+                    <a href="{{ path("library_update", { 'id': i.id }) }}">Edit</a><br>
+                    <a href=" {{ path("library_delete", { 'id': i.id }) }}">Delete</a></td>
+            </tr>
+        {% endfor %}
+    </table>
+</main>
+
+{% endblock %}
