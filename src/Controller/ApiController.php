@@ -118,11 +118,11 @@ class ApiController extends AbstractController
 
     #[Route("api/library/book/{isbn}", name: "api-library-books-isbn")]
     public function libraryByIsbn(
-        ?string $isbn = '9789174296006',
-        LibraryRepository $libraryRepository
+        LibraryRepository $libraryRepository,
+        ?string $isbn = '9789174296006'
     ): Response {
         $libraryItem = $libraryRepository->findOneBy(['isbn' => $isbn]);
-        
+
         return $this->json($libraryItem);
     }
 }
