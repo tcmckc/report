@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite name="/Users/Tomoko1/dbwebb-kurser/mvc/me/report/phpunit.xml.dist" tests="10" assertions="21" errors="0" failures="0" skipped="0" time="0.066475">
+    <testsuite name="Project Test Suite" tests="10" assertions="21" errors="0" failures="0" skipped="0" time="0.066475">
+      <testsuite name="App\Game\DeckTest" file="/Users/Tomoko1/dbwebb-kurser/mvc/me/report/tests/Game/DeckTest.php" tests="2" assertions="4" errors="0" failures="0" skipped="0" time="0.046459">
+        <testcase name="testCreateDeck" file="/Users/Tomoko1/dbwebb-kurser/mvc/me/report/tests/Game/DeckTest.php" line="12" class="App\Game\DeckTest" classname="App.Game.DeckTest" assertions="1" time="0.043067"/>
+        <testcase name="testDrawCard" file="/Users/Tomoko1/dbwebb-kurser/mvc/me/report/tests/Game/DeckTest.php" line="20" class="App\Game\DeckTest" classname="App.Game.DeckTest" assertions="3" time="0.003393"/>
+      </testsuite>
+      <testsuite name="App\Game\GameTest" file="/Users/Tomoko1/dbwebb-kurser/mvc/me/report/tests/Game/GameTest.php" tests="8" assertions="17" errors="0" failures="0" skipped="0" time="0.020016">
+        <testcase name="testCreateGame" file="/Users/Tomoko1/dbwebb-kurser/mvc/me/report/tests/Game/GameTest.php" line="16" class="App\Game\GameTest" classname="App.Game.GameTest" assertions="1" time="0.003074"/>
+        <testcase name="testGetPlayerHand" file="/Users/Tomoko1/dbwebb-kurser/mvc/me/report/tests/Game/GameTest.php" line="24" class="App\Game\GameTest" classname="App.Game.GameTest" assertions="2" time="0.002447"/>
+        <testcase name="testGetBankerHand" file="/Users/Tomoko1/dbwebb-kurser/mvc/me/report/tests/Game/GameTest.php" line="33" class="App\Game\GameTest" classname="App.Game.GameTest" assertions="2" time="0.002404"/>
+        <testcase name="testPrepareGame" file="/Users/Tomoko1/dbwebb-kurser/mvc/me/report/tests/Game/GameTest.php" line="42" class="App\Game\GameTest" classname="App.Game.GameTest" assertions="2" time="0.002375"/>
+        <testcase name="testDrawCardForPlayer" file="/Users/Tomoko1/dbwebb-kurser/mvc/me/report/tests/Game/GameTest.php" line="51" class="App\Game\GameTest" classname="App.Game.GameTest" assertions="2" time="0.002578"/>
+        <testcase name="testPlayBanker" file="/Users/Tomoko1/dbwebb-kurser/mvc/me/report/tests/Game/GameTest.php" line="60" class="App\Game\GameTest" classname="App.Game.GameTest" assertions="3" time="0.002743"/>
+        <testcase name="testGetScore" file="/Users/Tomoko1/dbwebb-kurser/mvc/me/report/tests/Game/GameTest.php" line="70" class="App\Game\GameTest" classname="App.Game.GameTest" assertions="3" time="0.002401"/>
+        <testcase name="testDetermineWinner" file="/Users/Tomoko1/dbwebb-kurser/mvc/me/report/tests/Game/GameTest.php" line="79" class="App\Game\GameTest" classname="App.Game.GameTest" assertions="2" time="0.001994"/>
+      </testsuite>
+    </testsuite>
+  </testsuite>
+</testsuites>
