@@ -29,7 +29,7 @@
 <p>Maintainability/complexity: THe Game class has a red circle indicatiing a cyclomatic complexity of 15 and maintainability index 35.44, both are higher than those of other classes. To improve my code, I can reduce the number of loops and conditional branches (if statements) which will lower the cyclomatic complexity score.</p>
 <p>Class: CLOC score for the Game class was 0 which means there are no comments. By adding comments, I should make the class easier to understand for other developers.</p>
 
-<img src="metrics.png" width="200px" alt="PhpMetrics-img">
+<img src="img/metrics.png" width="200px" alt="PhpMetrics-img">
 
 <h2>Scrutinizer</h2>
 <a href="https://scrutinizer-ci.com/g/tcmckc/report/?branch=master" target="_blank">
@@ -50,6 +50,74 @@ PHP Metrics draw this result based on cyclomatic complexity and maintainability,
 <p>1. Improve the constructer method in the Deck class by removing the unneccesary assignment of "$score=0;".</p>
 <p>2. Reduce paths in the getScore method in the Game class to improve its complexity.</p>
 <p>3. Add comments to the Game class and improve code to be more understandable.</p>
+<p>I made above three improvements to my code. Scrutinizer and PHP Metrics gave better scores as below. However, PHP Metrics's cynclomatic complexity and maintainability index didn't improve.</p>
+<h3>Scrutinizer:</h3>
+<table>
+    <tr>
+        <th></th>
+        <th>Before</th>
+        <th>After</th>
+    </tr>
+    <tr>
+        <td>Overall score</td>
+        <td>9.87</td>
+        <td>9.94</td>
+    </tr>
+    <tr>
+        <td>getScore() score</td>
+        <td>B</td>
+        <td>A</td>
+    </tr>
+    <tr>
+        <td>getScore() complexity</td>
+        <td>8</td>
+        <td>3</td>
+    </tr>
+    <tr>
+        <td>getScore() CRAP</td>
+        <td>8</td>
+        <td>7</td>
+    </tr>
+</table>
+
+<h3>PHP Metrics</h3>
+<table>
+    <tr>
+        <th></th>
+        <th>Before</th>
+        <th>After</th>
+    </tr>
+    <tr>
+        <td>Cynclomatic complexity for Game</td>
+        <td>15</td>
+        <td>15</td>
+    </tr>
+    <tr>
+        <td>Maintainability index for Game</td>
+        <td>35.44</td>
+        <td>35.44</td>
+    </tr>
+    <tr>
+        <td>Avarage cyclomatic complexity by class</td>
+        <td>2.94</td>
+        <td>2.65</td>
+    </tr>
+    <tr>
+        <td>ClassRank for Game</td>
+        <td>74.26</td>
+        <td>35.44</td>
+    </tr>
+    <tr>
+        <td>Average weighted method count by class</td>
+        <td>5.29</td>
+        <td>5</td>
+    </tr>
+    <tr>
+        <td>CLOC for Game</td>
+        <td>0</td>
+        <td>40</td>
+    </tr>
+</table>
 
 <h2>Discussion</h2>
 From PHP Metrics and Schrutinizer, I got some feedbacks which I never thougt of. So I think it is good to use these tools to improve my code and keep in mind about writing clean code which is easy to forget when I am working on developing something. I think writing clean code is also important from security perspective because it is easier to find vulnerabilities in clean code than in messy code. I also think it is good to use these tools to check my code before I submit a pull request to the main branch. At the same time, it will be good not to reply too much on these tools as it might not catch all runtime or dynamic issues.</p>
