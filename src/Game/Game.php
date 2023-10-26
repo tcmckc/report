@@ -10,6 +10,9 @@ class Game
     private $player;
     private $banker;
 
+    /**
+     * Constructor for initializing the Game
+     */
     public function __construct()
     {
         $this->deck = new Deck();
@@ -18,21 +21,33 @@ class Game
         $this->banker = [];
     }
 
+    /**
+     * Get the value of deck
+     */
     public function getGameDeck()
     {
         return $this->deck;
     }
 
+    /**
+     * Get the value of player
+     */
     public function getPlayerHand()
     {
         return $this->player;
     }
 
+    /**
+     * Get the value of banker
+     */
     public function getBankerHand()
     {
         return $this->banker;
     }
 
+    /**
+     * Get the value of player
+     */
     public function prepareGame(): array
     {
         $playerHand = $this->getPlayerHand();
@@ -51,6 +66,9 @@ class Game
         ];
     }
 
+    /**
+     * Get the value of player
+     */
     public function drawCardForPlayer(): array
     {
         $drawnCard = $this->deck->drawCard();
@@ -63,6 +81,9 @@ class Game
         ];
     }
 
+    /**
+     * Add card to player or banker hand
+     */
     public function addCard($card, $who)
     {
         if ($who === 'player') {
@@ -73,6 +94,9 @@ class Game
         return $this->banker;
     }
 
+    /**
+     * Get the value of player
+     */
     public function playBanker(): array
     {
         $gameDeck = $this->getGameDeck();
@@ -92,21 +116,47 @@ class Game
 
     }
 
+    /**
+     * Get the value of player
+     */
+    // public function getScore($who)
+    // {
+    //     $hand = ($who === 'player') ? $this->player : $this->banker;
+
+    //     $score = 0;
+
+    //     foreach ($hand as $card) {
+    //         $value = $card['value'];
+
+    //         $score += (is_numeric($value)) ? (int) $value : (($value === 'A') ? 1 : (($value === 'J') ? 11 : (($value === 'Q') ? 12 : (($value === 'K') ? 13 : 10))));
+    //     }
+
+    //     return $score;
+    // }
     public function getScore($who)
     {
         $hand = ($who === 'player') ? $this->player : $this->banker;
 
         $score = 0;
+        $cardValues = [
+            'A' => 1,
+            '2' => 2, '3' => 3, '4' => 4, '5' => 5,
+            '6' => 6, '7' => 7, '8' => 8, '9' => 9, '10' => 10,
+            'J' => 10, 'Q' => 10, 'K' => 10
+        ];
 
         foreach ($hand as $card) {
             $value = $card['value'];
 
-            $score += (is_numeric($value)) ? (int) $value : (($value === 'A') ? 1 : (($value === 'J') ? 11 : (($value === 'Q') ? 12 : (($value === 'K') ? 13 : 10))));
+            $score += $cardValues[$value];
         }
 
         return $score;
     }
 
+    /**
+     * Determine who is the winner
+     */
     public function determineWinner($playerScore, $bankerScore): string
     {
         if ($bankerScore > 21) {

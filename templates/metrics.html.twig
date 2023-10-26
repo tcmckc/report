@@ -4,7 +4,8 @@
 
 {% block main %}
 
-<h1>Introduction</h1>
+<h1>Metrics</h1>
+<h2>Introduction</h2>
 <h3>Codestyle</h3>
 <p>Codestyle refers to the consistent formatting and structure of the source code. Consistent coding style across the entire codebase improves readability and maintainability. It includes aspects like indentation, naming conventions, and comments.</p>
 
@@ -23,16 +24,34 @@
 <h3>CRAP</h3>
 <p>CRAP is a metric used to evaluate code maintainability. It combines cyclomatic complexity and code coverage. The CRAP score identifies complex code that lacks adequate test coverage.</p>
 
-<h1>PHP metrics</h1>
+<h2>PHP Metrics</h2>
+<p>Violations: There are class and package violations in my code. After installing symfony/marker-bundle, I encountered numerous errors related to dependency conflicts. I invested time in resolving these issues, eventually opting to downgrade the maker-bundle to a lower version. While there might be further steps I can take to clean up my dependencies, the current setup is functional.</p>
+<p>Maintainability/complexity: THe Game class has a red circle indicatiing a cyclomatic complexity of 15 and maintainability index 35.44, both are higher than those of other classes. To improve my code, I can reduce the number of loops and conditional branches (if statements) which will lower the cyclomatic complexity score.</p>
+<p>Class: CLOC score for the Game class was 0 which means there are no comments. By adding comments, I should make the class easier to understand for other developers.</p>
 
-<h1>Scrutinizer</h1>
+<img src="metrics.png" width="200px" alt="PhpMetrics-img">
 
-<h1>Analysis</h1>
+<h2>Scrutinizer</h2>
+<a href="https://scrutinizer-ci.com/g/tcmckc/report/?branch=master" target="_blank">
+    <img src="https://scrutinizer-ci.com/g/tcmckc/report/badges/quality-score.png?b=master" alt="Scrutinizer">
+    <img src="https://scrutinizer-ci.com/g/tcmckc/report/badges/coverage.png?b=master" alt="coverage">
+    <img src="https://scrutinizer-ci.com/g/tcmckc/report/badges/build.png?b=master" alt="build">
+    <img src="https://scrutinizer-ci.com/g/tcmckc/report/badges/code-intelligence.svg?b=master" alt="code intelligence">
+</a>
+<p>All classes got A and almost A for all operations as well but for getScore() in the Game class and constructer in the Deck class got B for their operations. In the getScore(), there are 66 paths and I think this complexity need to be improved. In the constructer of the Deck class, there is a variable which is dead and can be removed.</p>
+<p>Coverage is only 21% in the badge but this is for whole src folder and when I looked into Game folder where I wrote all the tests, the coverage is 100% and 94.5% for respective classes.</p>
 
-<h1>Improvements</h1>
+<h2>Analysis</h2>
+<p>I wondered why Scrutinizer gave A for the Game class even though a function in it got B. I learned that it is because scores for classes analyzes metrics such as complexity, maintainability, and various other factors related to the entire class, while operations refer to analysis of individual methods or functions separately from the overall class structure.</p>
+<p>Overall, the Game class got A as a class from Scrutinizer, but PHP Metrics gave the file which contains the Game class a red big circle which means it will be probably hard to maintain.
+PHP Metrics draw this result based on cyclomatic complexity and maintainability, while Scrutinizer is using metrics such as complexity, size, duplication, test coverage, changes and bugs. Due to which matrics you focus on, it seems to draw a different assesment.</p>
 
-<h1>Discussion</h1>
+<h2>Improvements</h2>
+<p>1. Improve the constructer method in the Deck class by removing the unneccesary assignment of "$score=0;".</p>
+<p>2. Reduce paths in the getScore method in the Game class to improve its complexity.</p>
+<p>3. Add comments to the Game class and improve code to be more understandable.</p>
 
-
+<h2>Discussion</h2>
+From PHP Metrics and Schrutinizer, I got some feedbacks which I never thougt of. So I think it is good to use these tools to improve my code and keep in mind about writing clean code which is easy to forget when I am working on developing something. I think writing clean code is also important from security perspective because it is easier to find vulnerabilities in clean code than in messy code. I also think it is good to use these tools to check my code before I submit a pull request to the main branch. At the same time, it will be good not to reply too much on these tools as it might not catch all runtime or dynamic issues.</p>
 
 {% endblock %}

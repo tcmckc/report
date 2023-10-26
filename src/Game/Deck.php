@@ -20,7 +20,6 @@ class Deck extends Card
 
         foreach ($suits as $suit) {
             foreach ($values as $value) {
-                $score = 0;
 
                 $score = ($value === 'A') ? 1 : (($value === 'J') ? 11 : (($value === 'Q') ? 12 : (($value === 'K') ? 13 : (int) $value)));
 
