@@ -11,12 +11,14 @@ This repositry is for mvc course.
    git clone https://github.com/tcmckc/report.git 
 
 2. **Install dependencies using Composer:**
+   ```bash
    composer install
 
 3. **Run the project locally**
+   ```bash
     php -S localhost:8888 -t public
 
-##Scrutinizer
+## Scrutinizer
 
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/tcmckc/report/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/tcmckc/report/?branch=master)
 
