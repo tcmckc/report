@@ -1,0 +1,53 @@
+{% extends "project/base.html.twig" %}
+
+{% block title %}Home{% endblock %}
+
+{% block main %}
+
+<body>
+    <h1 id="project-title">CLOUD SOLUTION</h1>
+    <p>In the ever-evolving landscape of cloud computing, choosing the right cloud service provider is pivotal for businesses aiming to leverage the power of the cloud. Amazon Web Services (AWS), Microsoft Azure, and Google Cloud Platform (GCP) stand as titans in the realm of cloud services, each offering a plethora of solutions tailored to diverse organizational needs. As organizations increasingly migrate their operations to the cloud, the decision-making process surrounding cloud service providers becomes both critical and complex.<p>
+    <img src="img/cloud.png" width="600px">
+    <h2>Market Share</h2>
+
+        <table>
+            {% for item in share %}
+                <tr>
+                    <td><img src="img/aws.png" width="100px"></td>
+                    <td>{{ item.aws }}%</td>
+                </tr>
+                <tr>
+                    <td><img src="img/azure.png" width="100px"></td>
+                    <td>{{ item.azure }}%</td>
+                </tr>
+                <tr>
+                    <td><img src="img/gcp.png" width="100px"></td>
+                    <td>{{ item.gcp }}%</td>
+                </tr>
+            {% endfor %}
+        </table>
+
+
+        <h3>Region</h3>
+        <h3>Industry</h3>
+        <h3>Customer size</h3>
+    <h2>Pricing Models</h2>
+        <h3>On-Demand Pricing</h3>
+        <h3>Pay-as-you-go vs. Prepaid plans</h3>
+        <h3>Storage pricing</h3>
+    <h2>Data Center</h2>
+        <a href="https://www.atomia.com/2016/11/24/comparing-the-geographical-coverage-of-aws-azure-and-google-cloud/">
+            <img src="img/datacenter.png" width="1000px">
+        </a>
+
+        <h3>Number of data centers</h3>
+        <h3>Locations of data centers</h3>
+    <h2>Security</h2>
+        <h3>IAM Identity and Access Management</h3>
+        <h3>Data Encryption</h3>
+        <h3>Network Security</h3>
+        <h3>Firewall</h3>
+</body>
+
+
+{% endblock %}

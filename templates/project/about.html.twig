@@ -1,0 +1,16 @@
+{% extends "project/base.html.twig" %}
+
+{% block title %}Home{% endblock %}
+
+{% block main %}
+
+<body class="project-main">
+    <h2>About</h2>
+    <p>This project is part of the MVC cource at Blekinge Technology of Institute. Using PHP framework Symfony, this web application is developed.</p>
+    <p>Content focuses on Cloud Solutions, mainly Amazon Web Services (AWS), Microsof Azure and Google Cloud Platform (GCP). This theme was chosen based on author's current interest.</p>
+    <div>
+        <a href="{{ path("project-db") }}">Database</a>
+    </div>
+</body>
+
+{% endblock %}

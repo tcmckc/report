@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow&family=Tenor+Sans&family=Titillium+Web&family=Tsukimi+Rounded&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Barlow&family=Overpass&family=Tenor+Sans&family=Titillium+Web&family=Tsukimi+Rounded&display=swap');
+
+h2, h3 {
+    font-family: 'Overpass', sans-serif;
+}
+
+a:hover {
+    color: #007bff;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.project-body {
+    padding: 20px;
+    background-color: #edf2f5;
+    font-family: 'Titillium Web', sans-serif;
+    text-align: center;
+    color: black;
+}
+
+.sidebar {
+    display: inline-block;
+}
+
+#project-title {
+    font-size: 80px;
+    color: #0c202b;
+    font-family: 'Overpass', sans-serif;
+}
+

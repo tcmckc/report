@@ -1,4 +1,22 @@
+# Report
+This repositry is for mvc course.
 
+## Prerequisites
+- [PHP](https://www.php.net/) installed on your local machine
+- [Composer](https://getcomposer.org/) - Dependency Manager for PHP
+
+## Installation
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/tcmckc/report.git 
+
+2. **Install dependencies using Composer:**
+   composer install
+
+3. **Run the project locally**
+    php -S localhost:8888 -t public
+
+##Scrutinizer
 
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/tcmckc/report/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/tcmckc/report/?branch=master)
 

@@ -6,6 +6,8 @@
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
 @import url("https://fonts.googleapis.com/css2?family=Anonymous+Pro&family=Montserrat&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Barlow&family=Tenor+Sans&family=Titillium+Web&family=Tsukimi+Rounded&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Barlow&family=Overpass&family=Tenor+Sans&family=Titillium+Web&family=Tsukimi+Rounded&display=swap");
 html {
   line-height: 1.15; /* 1 */
   -webkit-text-size-adjust: 100%; /* 2 */
@@ -332,6 +334,24 @@ html {
   margin-bottom: 0;
   font-size: 0.8em;
   padding: 20px;
+}
+
+h2, h3 {
+  font-family: "Overpass", sans-serif;
+}
+
+.project-main {
+  padding: 20px;
+  background-color: #edf2f5;
+  font-family: "Titillium Web", sans-serif;
+  text-align: center;
+  color: black;
+}
+
+#project-title {
+  font-size: 80px;
+  color: #0c202b;
+  font-family: "Overpass", sans-serif;
 }
 
 * {

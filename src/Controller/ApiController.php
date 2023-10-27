@@ -15,6 +15,7 @@ use App\Entity\Library;
 use Doctrine\Persistence\ManagerRegistry;
 use App\Repository\LibraryRepository;
 
+
 class ApiController extends AbstractController
 {
     #[Route("/api/", name: "api", methods: ['GET'])]

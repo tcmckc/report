@@ -1,0 +1,18 @@
+{% extends "project/base.html.twig" %}
+
+{% block title %}API{% endblock %}
+
+{% block main %}
+
+<h2>JSON API</h2>
+
+<form>
+    <label>Get market share: </label>
+    <input type="submit" name="share" value="Market Share"
+        onClick="this.form.action='{{ path('project-api-share') }}';">
+</form>
+
+
+
+
+{% endblock %}

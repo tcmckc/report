@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %}Project{% endblock %}</title>
+        
+        <link rel="icon" href="{{ asset('img/mvc_logo.png') }}">
+
+        <link rel="stylesheet" href="{{ asset("scss/project.css") }}"/>
+
+        {% block stylesheets %}
+            {{ encore_entry_link_tags('app') }}
+        {% endblock %}
+
+        {% block javascripts %}
+            {{ encore_entry_script_tags('app') }}
+        {% endblock %}
+    </head>
+    <body class="project-body">
+        <div class="sidebar">
+            <a href="{{ path("home") }}">Back</a>
+            <nav class="project-navi">
+                <ul>
+                    <li><a href="{{ path('project') }}">Project</a></li>
+                    <li><a href="{{ path('about') }}">Documentation</a></li>
+                    <li><a href="{{ path('project-about') }}">About</a></li>
+                    <li><a href="{{ path('project-db') }}">DB</a></li>
+                    <li><a href="{{ path('project-api') }}">API</a></li>
+                </ul>
+            </nav>
+        </div>
+        <main class="content">
+            {% block main %}
+            {% endblock %}
+        </main>
+    </body>
+</html>
