@@ -6,35 +6,70 @@
 
 <body>
     <h1 id="project-title">CLOUD SOLUTION</h1>
-    <p>In the ever-evolving landscape of cloud computing, choosing the right cloud service provider is pivotal for businesses aiming to leverage the power of the cloud. Amazon Web Services (AWS), Microsoft Azure, and Google Cloud Platform (GCP) stand as titans in the realm of cloud services, each offering a plethora of solutions tailored to diverse organizational needs. As organizations increasingly migrate their operations to the cloud, the decision-making process surrounding cloud service providers becomes both critical and complex.<p>
     <img src="img/cloud.png" width="600px">
-    <h2>Market Share</h2>
+    <p>In the ever-evolving landscape of cloud computing, choosing the right cloud service provider is pivotal for businesses aiming to leverage the power of the cloud. Amazon Web Services (AWS), Microsoft Azure, and Google Cloud Platform (GCP) are three major players, each offering a plethora of solutions tailored to diverse organizational needs. As organizations increasingly migrate their operations to the cloud, the decision-making process surrounding cloud service providers becomes both critical and complex.<p>
 
+    <h2>Comparison</h2>
         <table>
-            {% for item in share %}
-                <tr>
+                <th>
                     <td><img src="img/aws.png" width="100px"></td>
-                    <td>{{ item.aws }}%</td>
-                </tr>
-                <tr>
                     <td><img src="img/azure.png" width="100px"></td>
-                    <td>{{ item.azure }}%</td>
+                    <td><img src="img/gcp.png" width="100px"></td>
+                </th>
+
+                <tr>
+                    <td>Owner</td>
+                    <td>{{ aws.owner }}</td>
+                    <td>{{ azure.owner }}</td>
+                    <td>{{ gcp.owner }}</td>
                 </tr>
                 <tr>
-                    <td><img src="img/gcp.png" width="100px"></td>
-                    <td>{{ item.gcp }}%</td>
+                    <td>Launched year</td>
+                    <td>{{ aws.launch }}</td>
+                    <td>{{ azure.launch }}</td>
+                    <td>{{ gcp.launch }}</td>
                 </tr>
-            {% endfor %}
+                <tr>
+                    <td>Market share</td>
+                    <td>{{ aws.share }}%</td>
+                    <td>{{ azure.share }}%</td>
+                    <td>{{ gcp.share }}%</td>
+                </tr>
+                <tr>
+                    <td>Revenue</td>
+                    <td>${{ aws.revenue }}billion</td>
+                    <td>${{ azure.revenue }}billion</td>
+                    <td>${{ gcp.revenue }}billion</td>
+                </tr>
+                <tr>
+                    <td>File storage</td>
+                    <td>{{ aws.storage }}</td>
+                    <td>{{ azure.storage }}</td>
+                    <td>{{ gcp.storage }}</td>
+                </tr>
+                <tr>
+                    <td>Virtual network</td>
+                    <td>{{ aws.vn }}</td>
+                    <td>{{ azure.vn }}</td>
+                    <td>{{ gcp.vn }}</td>
+                </tr>
+                <tr>
+                    <td>API</td>
+                    <td>{{ aws.api }}</td>
+                    <td>{{ azure.api }}</td>
+                    <td>{{ gcp.api }}</td>
+                </tr>
         </table>
+        <p>This table provides a comprehensive comparison of three major cloud service providers. AWS is the industry pioneer, offers a comprehensive suite of services tailored to diverse business needs. Its robust infrastructure and extensive tools make it a top choice for established enterprises. Azure making it a favorite for businesses deeply rooted in Microsoft technologies. Its user-friendly interface simplifies cloud management, attracting newcomers and tech veterans alike. GCP stands out for its user-friendly approach and flexibility. It encourages experimentation and innovation, making it an excellent option for beginners and creative minds looking to explore the cloud's potential.</p>
 
+    <h2>Market Share</h2>
+        <img src="img/marketshare.png" width="600px">
 
-        <h3>Region</h3>
-        <h3>Industry</h3>
-        <h3>Customer size</h3>
     <h2>Pricing Models</h2>
         <h3>On-Demand Pricing</h3>
         <h3>Pay-as-you-go vs. Prepaid plans</h3>
         <h3>Storage pricing</h3>
+
     <h2>Data Center</h2>
         <a href="https://www.atomia.com/2016/11/24/comparing-the-geographical-coverage-of-aws-azure-and-google-cloud/">
             <img src="img/datacenter.png" width="1000px">
@@ -42,6 +77,7 @@
 
         <h3>Number of data centers</h3>
         <h3>Locations of data centers</h3>
+
     <h2>Security</h2>
         <h3>IAM Identity and Access Management</h3>
         <h3>Data Encryption</h3>
