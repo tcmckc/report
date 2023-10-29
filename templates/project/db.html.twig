@@ -4,9 +4,22 @@
 
 {% block main %}
 
-<body class="project-main">
+<body>
     <h2>Database</h2>
+    <img src="img/erd.png" width="500px">
+
     <p>I used database SQLite.</p>
+    <p><b>Tables: </b>All of above three tables contain same properties: owner company name, launched year, market share in percentage, revenue in us doller billion, file storage service name, virtual network service name and API platform name.</p>
+    <p><b>Relations: </b>About relations among tables, there are no direct relationships and these entities are independent of each other. Therefore, changes or data in one entity do not directly affect or depend on data in the other entities.</p>
+
+    <h3>ORM</h3>
+    <p><b>Advantages:</b> A developer can work with PHP instead of writing raw SQL queries, and ORM code is often more readable and maintainable than raw SQL. Also, properly implemented ORM frameworks can protect against common security threats like SQL injection attacks. Moreover, ORM frameworks can generate repetitive SQL code, reducing the amount of code developers need to write.</p>
+    
+    <p><b>Disadvantages:</b> Writing complex queries might be more challenging with ORM as compared to raw SQL. Also, if a developer is new to ORM, there is a need to learn the specific ORM framework. ORM can introduce performance overhead due to the additional processing required to map objects to database tables and vice versa.</p>
+    
+    <p><b>Differences:</b> SQL has its own syntax for querying databases, while ORM uses the syntax of the programming language it is built upon. ORM focuses on an object-oriented approach, representing database entities as objects, while SQL follows a relational model, organizing data into tables. ORM simplifies database interactions for simple to moderately complex applications. ORM handles the mapping between objects and database tables, ensuring data consistency and integrity.</p>
+    
+    <p><b>Similarities:</b>Both ORM and traditional SQL allow for data manipulation operations such as SELECT, INSERT, UPDATE, and DELETE. They enable applications to interact with databases, retrieve information, modify records, and perform various operations on the data. Also, both ORM and SQL provide means to define the structure of the database. </p>
 </body>
 
 {% endblock %}
