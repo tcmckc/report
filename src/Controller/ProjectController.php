@@ -219,5 +219,6 @@ class ProjectController extends AbstractController
     
             return new JsonResponse($data);
         }
+        return new JsonResponse(['error' => 'Invalid data provided'], JsonResponse::HTTP_BAD_REQUEST);
     }
 }
