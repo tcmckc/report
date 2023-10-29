@@ -6,11 +6,53 @@
 
 <h2>JSON API</h2>
 
-<form>
-    <label>Get market share: </label>
-    <input type="submit" name="share" value="Market Share"
-        onClick="this.form.action='{{ path('project-api-share') }}';">
-</form>
+
+<div>
+    <form>
+        <label>Get cloud data: </label>
+        <input type="submit" name="aws" value="AWS"
+            onClick="this.form.action='{{ path('project-api-aws') }}';">
+            <input type="submit" name="azure" value="Azure"
+            onClick="this.form.action='{{ path('project-api-azure') }}';">
+            <input type="submit" name="gcp" value="GCP"
+            onClick="this.form.action='{{ path('project-api-gcp') }}';">
+            <input type="submit" name="all" value="All"
+            onClick="this.form.action='{{ path('project-api-all') }}';">
+    </form>
+</div>
+
+<div>
+    <form method="post" action="{{ path('project-api-aws-update') }}">
+        <label for="share">Update AWS market share value:</label>
+        <input type="number" name="new">
+        <input type="submit" value="Update">
+    </form>
+</div>
+
+
+{# <form>
+    <div>
+        <label>Get cloud data: </label>
+        <input type="submit" name="aws" value="AWS"
+            onClick="this.form.action='{{ path('project-api-aws') }}';">
+            <input type="submit" name="azure" value="Azure"
+            onClick="this.form.action='{{ path('project-api-azure') }}';">
+            <input type="submit" name="gcp" value="GCP"
+            onClick="this.form.action='{{ path('project-api-gcp') }}';">
+            <input type="submit" name="all" value="All"
+            onClick="this.form.action='{{ path('project-api-all') }}';">
+    </div>
+    <form method="post" action="{{ path('project-api-aws-update') }}">
+        <div>
+            <label for="share">Update AWS market share value:</label>
+            <input type="number" name="new">
+    
+            <input type="submit" value="Update">
+        </div>
+    </form>
+
+</form> #}
+
 
 
 
