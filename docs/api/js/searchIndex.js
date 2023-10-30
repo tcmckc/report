@@ -246,6 +246,61 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/App-Controller-MetricsController.html#method_metrics"
         },                {
+            "fqsen": "\\App\\Controller\\ProjectController",
+            "name": "ProjectController",
+            "summary": "",
+            "url": "classes/App-Controller-ProjectController.html"
+        },                {
+            "fqsen": "\\App\\Controller\\ProjectController\u003A\u003AshowShare\u0028\u0029",
+            "name": "showShare",
+            "summary": "",
+            "url": "classes/App-Controller-ProjectController.html#method_showShare"
+        },                {
+            "fqsen": "\\App\\Controller\\ProjectController\u003A\u003AshowAbout\u0028\u0029",
+            "name": "showAbout",
+            "summary": "",
+            "url": "classes/App-Controller-ProjectController.html#method_showAbout"
+        },                {
+            "fqsen": "\\App\\Controller\\ProjectController\u003A\u003AshowAboutDb\u0028\u0029",
+            "name": "showAboutDb",
+            "summary": "",
+            "url": "classes/App-Controller-ProjectController.html#method_showAboutDb"
+        },                {
+            "fqsen": "\\App\\Controller\\ProjectController\u003A\u003AshowAPI\u0028\u0029",
+            "name": "showAPI",
+            "summary": "",
+            "url": "classes/App-Controller-ProjectController.html#method_showAPI"
+        },                {
+            "fqsen": "\\App\\Controller\\ProjectController\u003A\u003AgetAPIShare\u0028\u0029",
+            "name": "getAPIShare",
+            "summary": "",
+            "url": "classes/App-Controller-ProjectController.html#method_getAPIShare"
+        },                {
+            "fqsen": "\\App\\Controller\\ProjectController\u003A\u003AgetAPIAws\u0028\u0029",
+            "name": "getAPIAws",
+            "summary": "",
+            "url": "classes/App-Controller-ProjectController.html#method_getAPIAws"
+        },                {
+            "fqsen": "\\App\\Controller\\ProjectController\u003A\u003AgetAPIAzure\u0028\u0029",
+            "name": "getAPIAzure",
+            "summary": "",
+            "url": "classes/App-Controller-ProjectController.html#method_getAPIAzure"
+        },                {
+            "fqsen": "\\App\\Controller\\ProjectController\u003A\u003AgetAPIGCP\u0028\u0029",
+            "name": "getAPIGCP",
+            "summary": "",
+            "url": "classes/App-Controller-ProjectController.html#method_getAPIGCP"
+        },                {
+            "fqsen": "\\App\\Controller\\ProjectController\u003A\u003AgetAPICloud\u0028\u0029",
+            "name": "getAPICloud",
+            "summary": "",
+            "url": "classes/App-Controller-ProjectController.html#method_getAPICloud"
+        },                {
+            "fqsen": "\\App\\Controller\\ProjectController\u003A\u003AupdateAPIAWS\u0028\u0029",
+            "name": "updateAPIAWS",
+            "summary": "",
+            "url": "classes/App-Controller-ProjectController.html#method_updateAPIAWS"
+        },                {
             "fqsen": "\\App\\Controller\\QuoteController",
             "name": "QuoteController",
             "summary": "",
@@ -305,6 +360,201 @@ Search.appendIndex(
             "name": "report",
             "summary": "",
             "url": "classes/App-Controller-ReportControllerTwig.html#method_report"
+        },                {
+            "fqsen": "\\App\\Entity\\Cloud",
+            "name": "Cloud",
+            "summary": "",
+            "url": "classes/App-Entity-Cloud.html"
+        },                {
+            "fqsen": "\\App\\Entity\\Cloud\u003A\u003AgetId\u0028\u0029",
+            "name": "getId",
+            "summary": "",
+            "url": "classes/App-Entity-Cloud.html#method_getId"
+        },                {
+            "fqsen": "\\App\\Entity\\Cloud\u003A\u003AgetShare\u0028\u0029",
+            "name": "getShare",
+            "summary": "",
+            "url": "classes/App-Entity-Cloud.html#method_getShare"
+        },                {
+            "fqsen": "\\App\\Entity\\Cloud\u003A\u003AsetShare\u0028\u0029",
+            "name": "setShare",
+            "summary": "",
+            "url": "classes/App-Entity-Cloud.html#method_setShare"
+        },                {
+            "fqsen": "\\App\\Entity\\Cloud\u003A\u003AgetLaunch\u0028\u0029",
+            "name": "getLaunch",
+            "summary": "",
+            "url": "classes/App-Entity-Cloud.html#method_getLaunch"
+        },                {
+            "fqsen": "\\App\\Entity\\Cloud\u003A\u003AsetLaunch\u0028\u0029",
+            "name": "setLaunch",
+            "summary": "",
+            "url": "classes/App-Entity-Cloud.html#method_setLaunch"
+        },                {
+            "fqsen": "\\App\\Entity\\Cloud\u003A\u003AgetOwner\u0028\u0029",
+            "name": "getOwner",
+            "summary": "",
+            "url": "classes/App-Entity-Cloud.html#method_getOwner"
+        },                {
+            "fqsen": "\\App\\Entity\\Cloud\u003A\u003AsetOwner\u0028\u0029",
+            "name": "setOwner",
+            "summary": "",
+            "url": "classes/App-Entity-Cloud.html#method_setOwner"
+        },                {
+            "fqsen": "\\App\\Entity\\Cloud\u003A\u003AgetRevenue\u0028\u0029",
+            "name": "getRevenue",
+            "summary": "",
+            "url": "classes/App-Entity-Cloud.html#method_getRevenue"
+        },                {
+            "fqsen": "\\App\\Entity\\Cloud\u003A\u003AsetRevenue\u0028\u0029",
+            "name": "setRevenue",
+            "summary": "",
+            "url": "classes/App-Entity-Cloud.html#method_setRevenue"
+        },                {
+            "fqsen": "\\App\\Entity\\Cloud\u003A\u003AgetPricing\u0028\u0029",
+            "name": "getPricing",
+            "summary": "",
+            "url": "classes/App-Entity-Cloud.html#method_getPricing"
+        },                {
+            "fqsen": "\\App\\Entity\\Cloud\u003A\u003AsetPricing\u0028\u0029",
+            "name": "setPricing",
+            "summary": "",
+            "url": "classes/App-Entity-Cloud.html#method_setPricing"
+        },                {
+            "fqsen": "\\App\\Entity\\Cloud\u003A\u003AgetStorage\u0028\u0029",
+            "name": "getStorage",
+            "summary": "",
+            "url": "classes/App-Entity-Cloud.html#method_getStorage"
+        },                {
+            "fqsen": "\\App\\Entity\\Cloud\u003A\u003AsetStorage\u0028\u0029",
+            "name": "setStorage",
+            "summary": "",
+            "url": "classes/App-Entity-Cloud.html#method_setStorage"
+        },                {
+            "fqsen": "\\App\\Entity\\Cloud\u003A\u003AgetVn\u0028\u0029",
+            "name": "getVn",
+            "summary": "",
+            "url": "classes/App-Entity-Cloud.html#method_getVn"
+        },                {
+            "fqsen": "\\App\\Entity\\Cloud\u003A\u003AsetVn\u0028\u0029",
+            "name": "setVn",
+            "summary": "",
+            "url": "classes/App-Entity-Cloud.html#method_setVn"
+        },                {
+            "fqsen": "\\App\\Entity\\Cloud\u003A\u003AgetApi\u0028\u0029",
+            "name": "getApi",
+            "summary": "",
+            "url": "classes/App-Entity-Cloud.html#method_getApi"
+        },                {
+            "fqsen": "\\App\\Entity\\Cloud\u003A\u003AsetApi\u0028\u0029",
+            "name": "setApi",
+            "summary": "",
+            "url": "classes/App-Entity-Cloud.html#method_setApi"
+        },                {
+            "fqsen": "\\App\\Entity\\Cloud\u003A\u003A\u0024id",
+            "name": "id",
+            "summary": "",
+            "url": "classes/App-Entity-Cloud.html#property_id"
+        },                {
+            "fqsen": "\\App\\Entity\\Cloud\u003A\u003A\u0024share",
+            "name": "share",
+            "summary": "",
+            "url": "classes/App-Entity-Cloud.html#property_share"
+        },                {
+            "fqsen": "\\App\\Entity\\Cloud\u003A\u003A\u0024launch",
+            "name": "launch",
+            "summary": "",
+            "url": "classes/App-Entity-Cloud.html#property_launch"
+        },                {
+            "fqsen": "\\App\\Entity\\Cloud\u003A\u003A\u0024owner",
+            "name": "owner",
+            "summary": "",
+            "url": "classes/App-Entity-Cloud.html#property_owner"
+        },                {
+            "fqsen": "\\App\\Entity\\Cloud\u003A\u003A\u0024revenue",
+            "name": "revenue",
+            "summary": "",
+            "url": "classes/App-Entity-Cloud.html#property_revenue"
+        },                {
+            "fqsen": "\\App\\Entity\\Cloud\u003A\u003A\u0024pricing",
+            "name": "pricing",
+            "summary": "",
+            "url": "classes/App-Entity-Cloud.html#property_pricing"
+        },                {
+            "fqsen": "\\App\\Entity\\Cloud\u003A\u003A\u0024storage",
+            "name": "storage",
+            "summary": "",
+            "url": "classes/App-Entity-Cloud.html#property_storage"
+        },                {
+            "fqsen": "\\App\\Entity\\Cloud\u003A\u003A\u0024vn",
+            "name": "vn",
+            "summary": "",
+            "url": "classes/App-Entity-Cloud.html#property_vn"
+        },                {
+            "fqsen": "\\App\\Entity\\Cloud\u003A\u003A\u0024api",
+            "name": "api",
+            "summary": "",
+            "url": "classes/App-Entity-Cloud.html#property_api"
+        },                {
+            "fqsen": "\\App\\Entity\\GCP",
+            "name": "GCP",
+            "summary": "",
+            "url": "classes/App-Entity-GCP.html"
+        },                {
+            "fqsen": "\\App\\Entity\\GCP\u003A\u003AgetId\u0028\u0029",
+            "name": "getId",
+            "summary": "",
+            "url": "classes/App-Entity-GCP.html#method_getId"
+        },                {
+            "fqsen": "\\App\\Entity\\GCP\u003A\u003AgetShare\u0028\u0029",
+            "name": "getShare",
+            "summary": "",
+            "url": "classes/App-Entity-GCP.html#method_getShare"
+        },                {
+            "fqsen": "\\App\\Entity\\GCP\u003A\u003AsetShare\u0028\u0029",
+            "name": "setShare",
+            "summary": "",
+            "url": "classes/App-Entity-GCP.html#method_setShare"
+        },                {
+            "fqsen": "\\App\\Entity\\GCP\u003A\u003AgetPricingmodel\u0028\u0029",
+            "name": "getPricingmodel",
+            "summary": "",
+            "url": "classes/App-Entity-GCP.html#method_getPricingmodel"
+        },                {
+            "fqsen": "\\App\\Entity\\GCP\u003A\u003AsetPricingmodel\u0028\u0029",
+            "name": "setPricingmodel",
+            "summary": "",
+            "url": "classes/App-Entity-GCP.html#method_setPricingmodel"
+        },                {
+            "fqsen": "\\App\\Entity\\GCP\u003A\u003AgetDatacenter\u0028\u0029",
+            "name": "getDatacenter",
+            "summary": "",
+            "url": "classes/App-Entity-GCP.html#method_getDatacenter"
+        },                {
+            "fqsen": "\\App\\Entity\\GCP\u003A\u003AsetDatacenter\u0028\u0029",
+            "name": "setDatacenter",
+            "summary": "",
+            "url": "classes/App-Entity-GCP.html#method_setDatacenter"
+        },                {
+            "fqsen": "\\App\\Entity\\GCP\u003A\u003A\u0024id",
+            "name": "id",
+            "summary": "",
+            "url": "classes/App-Entity-GCP.html#property_id"
+        },                {
+            "fqsen": "\\App\\Entity\\GCP\u003A\u003A\u0024share",
+            "name": "share",
+            "summary": "",
+            "url": "classes/App-Entity-GCP.html#property_share"
+        },                {
+            "fqsen": "\\App\\Entity\\GCP\u003A\u003A\u0024pricingmodel",
+            "name": "pricingmodel",
+            "summary": "",
+            "url": "classes/App-Entity-GCP.html#property_pricingmodel"
+        },                {
+            "fqsen": "\\App\\Entity\\GCP\u003A\u003A\u0024datacenter",
+            "name": "datacenter",
+            "summary": "",
+            "url": "classes/App-Entity-GCP.html#property_datacenter"
         },                {
             "fqsen": "\\App\\Entity\\Library",
             "name": "Library",
@@ -381,6 +631,66 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/App-Entity-Library.html#property_image"
         },                {
+            "fqsen": "\\App\\Entity\\Share",
+            "name": "Share",
+            "summary": "",
+            "url": "classes/App-Entity-Share.html"
+        },                {
+            "fqsen": "\\App\\Entity\\Share\u003A\u003AgetId\u0028\u0029",
+            "name": "getId",
+            "summary": "",
+            "url": "classes/App-Entity-Share.html#method_getId"
+        },                {
+            "fqsen": "\\App\\Entity\\Share\u003A\u003AgetAws\u0028\u0029",
+            "name": "getAws",
+            "summary": "",
+            "url": "classes/App-Entity-Share.html#method_getAws"
+        },                {
+            "fqsen": "\\App\\Entity\\Share\u003A\u003AsetAws\u0028\u0029",
+            "name": "setAws",
+            "summary": "",
+            "url": "classes/App-Entity-Share.html#method_setAws"
+        },                {
+            "fqsen": "\\App\\Entity\\Share\u003A\u003AgetAzure\u0028\u0029",
+            "name": "getAzure",
+            "summary": "",
+            "url": "classes/App-Entity-Share.html#method_getAzure"
+        },                {
+            "fqsen": "\\App\\Entity\\Share\u003A\u003AsetAzure\u0028\u0029",
+            "name": "setAzure",
+            "summary": "",
+            "url": "classes/App-Entity-Share.html#method_setAzure"
+        },                {
+            "fqsen": "\\App\\Entity\\Share\u003A\u003AgetGcp\u0028\u0029",
+            "name": "getGcp",
+            "summary": "",
+            "url": "classes/App-Entity-Share.html#method_getGcp"
+        },                {
+            "fqsen": "\\App\\Entity\\Share\u003A\u003AsetGcp\u0028\u0029",
+            "name": "setGcp",
+            "summary": "",
+            "url": "classes/App-Entity-Share.html#method_setGcp"
+        },                {
+            "fqsen": "\\App\\Entity\\Share\u003A\u003A\u0024id",
+            "name": "id",
+            "summary": "",
+            "url": "classes/App-Entity-Share.html#property_id"
+        },                {
+            "fqsen": "\\App\\Entity\\Share\u003A\u003A\u0024aws",
+            "name": "aws",
+            "summary": "",
+            "url": "classes/App-Entity-Share.html#property_aws"
+        },                {
+            "fqsen": "\\App\\Entity\\Share\u003A\u003A\u0024azure",
+            "name": "azure",
+            "summary": "",
+            "url": "classes/App-Entity-Share.html#property_azure"
+        },                {
+            "fqsen": "\\App\\Entity\\Share\u003A\u003A\u0024gcp",
+            "name": "gcp",
+            "summary": "",
+            "url": "classes/App-Entity-Share.html#property_gcp"
+        },                {
             "fqsen": "\\App\\Game\\Deck",
             "name": "Deck",
             "summary": "",
@@ -418,52 +728,52 @@ Search.appendIndex(
         },                {
             "fqsen": "\\App\\Game\\Game\u003A\u003A__construct\u0028\u0029",
             "name": "__construct",
-            "summary": "",
+            "summary": "Constructor\u0020for\u0020initializing\u0020the\u0020Game",
             "url": "classes/App-Game-Game.html#method___construct"
         },                {
             "fqsen": "\\App\\Game\\Game\u003A\u003AgetGameDeck\u0028\u0029",
             "name": "getGameDeck",
-            "summary": "",
+            "summary": "Get\u0020the\u0020value\u0020of\u0020deck",
             "url": "classes/App-Game-Game.html#method_getGameDeck"
         },                {
             "fqsen": "\\App\\Game\\Game\u003A\u003AgetPlayerHand\u0028\u0029",
             "name": "getPlayerHand",
-            "summary": "",
+            "summary": "Get\u0020the\u0020value\u0020of\u0020player",
             "url": "classes/App-Game-Game.html#method_getPlayerHand"
         },                {
             "fqsen": "\\App\\Game\\Game\u003A\u003AgetBankerHand\u0028\u0029",
             "name": "getBankerHand",
-            "summary": "",
+            "summary": "Get\u0020the\u0020value\u0020of\u0020banker",
             "url": "classes/App-Game-Game.html#method_getBankerHand"
         },                {
             "fqsen": "\\App\\Game\\Game\u003A\u003AprepareGame\u0028\u0029",
             "name": "prepareGame",
-            "summary": "",
+            "summary": "Get\u0020the\u0020value\u0020of\u0020player",
             "url": "classes/App-Game-Game.html#method_prepareGame"
         },                {
             "fqsen": "\\App\\Game\\Game\u003A\u003AdrawCardForPlayer\u0028\u0029",
             "name": "drawCardForPlayer",
-            "summary": "",
+            "summary": "Get\u0020the\u0020value\u0020of\u0020player",
             "url": "classes/App-Game-Game.html#method_drawCardForPlayer"
         },                {
             "fqsen": "\\App\\Game\\Game\u003A\u003AaddCard\u0028\u0029",
             "name": "addCard",
-            "summary": "",
+            "summary": "Add\u0020card\u0020to\u0020player\u0020or\u0020banker\u0020hand",
             "url": "classes/App-Game-Game.html#method_addCard"
         },                {
             "fqsen": "\\App\\Game\\Game\u003A\u003AplayBanker\u0028\u0029",
             "name": "playBanker",
-            "summary": "",
+            "summary": "Get\u0020the\u0020value\u0020of\u0020player",
             "url": "classes/App-Game-Game.html#method_playBanker"
         },                {
             "fqsen": "\\App\\Game\\Game\u003A\u003AgetScore\u0028\u0029",
             "name": "getScore",
-            "summary": "",
+            "summary": "Get\u0020the\u0020value\u0020of\u0020player",
             "url": "classes/App-Game-Game.html#method_getScore"
         },                {
             "fqsen": "\\App\\Game\\Game\u003A\u003AdetermineWinner\u0028\u0029",
             "name": "determineWinner",
-            "summary": "",
+            "summary": "Determine\u0020who\u0020is\u0020the\u0020winner",
             "url": "classes/App-Game-Game.html#method_determineWinner"
         },                {
             "fqsen": "\\App\\Game\\Game\u003A\u003A\u0024deck",
@@ -486,6 +796,31 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/App-Kernel.html"
         },                {
+            "fqsen": "\\App\\Repository\\CloudRepository",
+            "name": "CloudRepository",
+            "summary": "",
+            "url": "classes/App-Repository-CloudRepository.html"
+        },                {
+            "fqsen": "\\App\\Repository\\CloudRepository\u003A\u003A__construct\u0028\u0029",
+            "name": "__construct",
+            "summary": "",
+            "url": "classes/App-Repository-CloudRepository.html#method___construct"
+        },                {
+            "fqsen": "\\App\\Repository\\CloudRepository\u003A\u003AsaveCloud\u0028\u0029",
+            "name": "saveCloud",
+            "summary": "",
+            "url": "classes/App-Repository-CloudRepository.html#method_saveCloud"
+        },                {
+            "fqsen": "\\App\\Repository\\GCPRepository",
+            "name": "GCPRepository",
+            "summary": "",
+            "url": "classes/App-Repository-GCPRepository.html"
+        },                {
+            "fqsen": "\\App\\Repository\\GCPRepository\u003A\u003A__construct\u0028\u0029",
+            "name": "__construct",
+            "summary": "",
+            "url": "classes/App-Repository-GCPRepository.html#method___construct"
+        },                {
             "fqsen": "\\App\\Repository\\LibraryRepository",
             "name": "LibraryRepository",
             "summary": "",
@@ -505,6 +840,16 @@ Search.appendIndex(
             "name": "remove",
             "summary": "",
             "url": "classes/App-Repository-LibraryRepository.html#method_remove"
+        },                {
+            "fqsen": "\\App\\Repository\\ShareRepository",
+            "name": "ShareRepository",
+            "summary": "",
+            "url": "classes/App-Repository-ShareRepository.html"
+        },                {
+            "fqsen": "\\App\\Repository\\ShareRepository\u003A\u003A__construct\u0028\u0029",
+            "name": "__construct",
+            "summary": "",
+            "url": "classes/App-Repository-ShareRepository.html#method___construct"
         },                {
             "fqsen": "\\",
             "name": "\\",
